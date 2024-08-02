@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const sgMail = require('@sendgrid/mail');
 
-// Initialize Express app
+
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -11,7 +11,7 @@ require('dotenv').config();
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-// The rest of your server.js code
+
 
 
 app.get('/', (req, res) => {
@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 app.post('/subscribe', (req, res) => {
   const email = req.body.email;
 
-  // Define email content
+
   const msg = {
     to: email,
     from: 'jeffysambabu@gmail.com',
